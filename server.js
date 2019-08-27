@@ -1,4 +1,7 @@
 const express = require('express');
+
+const people = require('./people.json');
+
 const app = express();
 
 app.set('view engine', 'pug');
@@ -11,7 +14,10 @@ const server = app.listen(7000, () =>{
 
 
 app.get('/', (req, res) => {
-    res.render("index", {title: "Homepage"});
+    res.render("index", {
+        title: "Homepage",
+        people: people.profiles
+    });
 });
 
 
