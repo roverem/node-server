@@ -1,6 +1,6 @@
 const express = require('express');
 
-const people = require('./people.json');
+const parrillas = require('./parrillas.json');
 
 const app = express();
 
@@ -16,8 +16,9 @@ const server = app.listen(7000, () =>{
 app.get('/', (req, res) => {
     res.render("index", {
         title: "Homepage",
-        people: people.profiles
+        parrillas: parrillas.profiles
     });
 });
+
 
 

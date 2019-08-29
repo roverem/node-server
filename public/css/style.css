@@ -69,15 +69,15 @@ body {
 /* Profile Card
    ========================================================================== */
 
-.person {
+.parrilla {
   text-align: center;
 }
 
-.person > * {
+.parrilla > * {
   margin-bottom: 5px;
 }
 
-.person-image {
+.parrilla-image {
   width: 100%;
   height: 300px;
 }

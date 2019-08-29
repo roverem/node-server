@@ -2,10 +2,11 @@ extends default
 
 block content
   div.container
-    each person in people
-        div.person
-            div.person-image(style=`background: url('/images/${person.imgSrc}') top center no-repeat; background-size: cover;`)
-            h2.person-name
-                | #{person.firstname} #{person.lastname}
-            a(href=`/profile?id=${person.id}`)
-                | View Profile
+    each parrilla in parrillas
+        div.parrilla
+            each image in parrilla.imgSrc
+                div.parrilla-image(style=`background: url('/images/${image}') top center no-repeat; background-size: cover;`)
+            h2.parrilla-name
+                | #{parrilla.name}
+            a(href=`/profile?id=${parrilla.id}`)
+                | Ver Parilla
